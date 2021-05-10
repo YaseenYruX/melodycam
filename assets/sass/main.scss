@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;800&display=swap');
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url('~assets/fonts/FuturaBookC.eot');
+    src: url('~assets/fonts/FuturaBookC.eot?#iefix') format('embedded-opentype'),
+        url('~assets/fonts/FuturaBookC.woff2') format('woff2'),
+        url('~assets/fonts/FuturaBookC.woff') format('woff'),
+        url('~assets/fonts/FuturaBookC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@import 'components/layout/default';
+@import 'components/darkvariables';
+.dark-theme {
+    background: $bgColor;
+    height: 100%;
+	@import 'components/layout/themed';
+	@import 'components/common/button';
+    @import 'components/common/header';
+	@import 'components/home/index';
+    @import 'components/login/index';
+    @import 'components/dashboard/index';
+}
+@import 'components/lightvariables';
+.light-theme {
+    background: $bgColor;
+    height: 100%;
+	@import 'components/layout/themed';
+	@import 'components/common/button';
+    @import 'components/common/header';
+	@import 'components/home/index';
+    @import 'components/login/index';
+    @import 'components/dashboard/index';
+} 

@@ -1,0 +1,146 @@
+&.theming{
+	position: relative;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+	&::after{
+		content:'';
+		background-image: url(~/assets/images/circle_vector.svg);
+	    position: absolute;
+	    width: 380px;
+    	height: 350px;
+	    top: 0;
+	    left: 0;
+	    background-size: cover;
+	}
+}
+
+.video_chating_sec {
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    top: 115px;
+    right: 0;
+
+    h2{
+    	font-family: Montserrat;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 64px;
+		line-height: 78px;
+		letter-spacing: 0.07em;
+		color: #FF1A1A;
+		
+    }
+
+    h4{
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 37px;
+		text-align: center;
+		color: $fontColor;	
+		margin-bottom: 30px;
+    }
+
+    p{
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		line-height: 27px;
+		text-align: center;
+		letter-spacing: 0.045em;
+		color: $homePara;
+		margin-bottom: 30px;
+    }
+
+    h6{
+    	font-style: normal;
+    	font-weight: normal;
+    	font-size: 22px;
+    	line-height: 27px;
+    	color: $fontColor;
+    }
+
+    a{
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		line-height: 27px;
+		color: #0E5979;
+    }
+}
+
+.melocam_right_img  {
+	img{
+	    width: 557px;
+	    height: 519px;
+	    position: absolute;
+	    right: -160px;
+
+	    &.show-mobile{
+    		display: none;
+    	}
+	}
+
+    }
+
+
+@media (max-width: 520px){
+
+&.theming{
+	&::after{
+		content:'';
+		background-image: url(~/assets/images/home_tp_responsive.png);
+		width: 130px;
+	    height: 323px;
+	    top: -14px;
+	    left: -2px;
+	}
+}
+
+.video_chating_sec{
+	h2{
+		font-size: 45px;
+		line-height: 48px;
+	}
+
+	h4{
+		font-size: 23px;
+		line-height: 28.04px
+	}
+
+	p{
+		font-size: 15px;
+		line-height: 20px;
+		letter-spacing: 0.045em;
+	}
+}
+
+.melocam_right_img{
+	img.show-dek{
+		display: none;
+	}
+
+	img.show-mobile{
+		display: block;
+	    width: 342px;
+	    height: 274px;
+	    right: 0;
+	    top: 160px;
+	    background-size: cover;
+	}
+}
+
+.video_chating_sec{
+	top: 75px;
+}
+
+.melocam_right_img{
+	img.show-mobile{
+		top: 110px;
+	}
+}
+
+}

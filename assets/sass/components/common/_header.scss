@@ -1,0 +1,97 @@
+.header_sec{
+	padding: 0px 40px;
+	.logo_sec{
+		background-image: url(~/assets/images/logo_bg.svg);
+		width: 480px;
+    	height: 175px;
+	    background-repeat: no-repeat;
+	    text-align: center;
+	    transform: translate(0px, -30px);
+	    background-size: cover;
+
+    	h2{
+    		a{
+    			color: #FF1A1A;
+			    text-decoration: none;
+			    font-size: 40px;
+			    letter-spacing: 0.07em;
+			    line-height: 130px;
+			    font-weight: 800;
+			    position: relative;
+			    left: -40px;
+			    top: 10px;
+    		}
+    	}
+	}
+
+	.user_setting{
+		background-image: url(~/assets/images/user_bg.svg);
+		background-repeat: no-repeat;
+	    width: 240px;
+    	height: 100%;
+	    background-position: top right;
+	    ul{
+	    	padding: 0;
+    		text-align: center;
+    		margin-bottom: 0;
+    		padding-top: 40px;
+	    	li{
+	    		display: inline-block;
+    			padding-right: 10px;
+	    	}
+	    }
+	}
+}
+
+
+@media (max-width: 520px){
+	.header_sec{
+    	padding: 0;
+			.logo_sec{
+				background-image: url(~/assets/images/mobile-logo-menu.png);
+				width: 299px;
+				height: 96px;
+				transform: translate(0px, 0px);
+			}
+		.logo_sec{
+			h2{
+				a{
+					font-size: 25px;
+					line-height: 30px;
+				}
+			}
+		}
+
+		.user_setting{
+			background-image: url(~/assets/images/tp-setting-mobile.png);
+			width: 106px;
+			height: 96px;
+			ul{
+    			padding-top: 20px;
+    			text-align: right;
+				li{
+					width: 35%;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.row{
+			    margin: 0;
+
+			 .col-md-4{
+				width: 60%;
+	    		float: left;
+	    		padding: 0;
+			}
+
+			.col-md-8{
+				width: 39%;
+	    		float: left;
+	    		padding: 0;
+			}
+		}
+	}
+}
