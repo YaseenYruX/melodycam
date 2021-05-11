@@ -1,8 +1,7 @@
 <template>
-  <div class="container signup">
-    <div class="row">
-      <div class="col-md-8 mx-auto">
-        <div class="login_sec_main">
+	<div>
+		<b-modal v-model="modalShow" id="my-modal1" size="lg" ref="my-modal1" hide-footer>
+		  <div class="login_sec_main in_modal">
           <CommonModalHead />
           <div class="modal_heading_sec">
             <h3>Login</h3>
@@ -28,7 +27,7 @@
 
             <div class="row">
               <div class="col-md-12">
-                <b-form-checkbox v-model="status">
+                <b-form-checkbox v-model="rememberStatus">
                   Remember my data
                 </b-form-checkbox>
               </div>
@@ -46,28 +45,26 @@
 
           </form>
         </div>
-      </div>
-    </div>
-  </div>
+		</b-modal>
+	</div>
 </template>
-
-<script lang="js">
+<script>
 import { human_verifier_src_script } from "@/config/urls";
 export default {
-  name: 'Login',
-  layout: 'plain',
-  components: {
-    
-  },
+  name: 'LoginModal',
   data () {
     return {
-      status: false,
-      email: '',
+      email:'',
       name: '',
-      password: ''
+      password: '',
+      rememberStatus: false,
+      modalShow: false
     }
   },
-  computed: {
+  props: {
+    status: Boolean,
+  },
+  mounted() {
     
   },
   methods: {
@@ -78,10 +75,16 @@ export default {
       document.querySelector("body").appendChild(externalScript);
     },
   },
-  mounted() {
-    this.$nextTick(() => {
-        this.loadExternalScript();
-    });
-  },
+  watch: {
+    modalShow () {
+      this.$emit('loginModalStatusEv',this.modalShow)
+      this.$nextTick(() => {
+          this.loadExternalScript();
+      });
+    },
+    status () {
+      this.modalShow=this.status
+    }
+  }
 }
 </script>

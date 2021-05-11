@@ -22,6 +22,12 @@
 					color: $hoverColor;
 				}
 			}
+			&.active{
+				a{
+					background: #fff;
+					color: $hoverColor;
+				}
+			}
 		}
 	}
 }

@@ -4,9 +4,7 @@
       <div class="col-md-12">
         <div class="menu_dashboard_sec">
           <ul>
-            <li><a href="#">Female</a></li>
-            <li><a href="#">male</a></li>
-            <li><a href="#">Couple</a></li>
+            <li :class="(currentType==type?'active':'')" v-for="(type, typek) in types" :key="typek"><a @click="currentType=type">{{type}}</a></li>
           </ul>
         </div>
       </div>
@@ -17,7 +15,7 @@
         <div class="col-md-6">
           <div class="left_dashboard_sec">
             <div class="search_btn">
-              <a v-b-modal.my-modal ><img src="~assets/images/search_icon.png">Searching for female</a>
+              <a v-b-modal.my-modal ><img src="~assets/images/search_icon.png">Searching for {{currentType}}</a>
             </div>
           </div>
 
@@ -81,7 +79,9 @@ export default {
   },
   data () {
     return {
-      chatShowing: false
+      chatShowing: false,
+      types: ['Female', 'Male', 'Couple'],
+      currentType: 'Female'
     }
   },
   computed: {

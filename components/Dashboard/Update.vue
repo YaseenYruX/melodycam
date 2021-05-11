@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<b-modal id="my-modal" size="lg" ref="my-modal" hide-footer>
-		  <div class="login_sec_main">
+		  <div class="login_sec_main in_modal">
           <CommonModalHead />
           <div class="modal_heading_sec">
             <h3>Update</h3>

@@ -5,6 +5,11 @@
     border-radius: 40px;
     min-height: 600px;
 
+	&.in_modal{
+		box-shadow: none;
+    	border-radius: 0px;
+	}
+
     form{
     	padding: 20px 70px 100px;
     }

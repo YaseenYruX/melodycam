@@ -11,12 +11,18 @@
 				<div class="user_setting float-right" :class="(modalStatus===true?'pop-up':'')">
 					<ul>
 						<li><a @click="modalStatus=true" ><img src="~assets/images/setting-icon-01.png"></a></li>
-						<li><a href="#"><img src="~assets/images/setting-icon-02.png"></a></li>
+						<li>
+							<a class="loginBtn" @click="loginModalStatus=true">
+								<!-- <img src="~assets/images/setting-icon-02.png"> -->
+								Login
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<CommonSideMenu v-if="modalStatus" :status="modalStatus" @sideMenuStatus="tglCls" />
+    	<DashboardLogin @loginModalStatusEv="updateLoginModal" :status="loginModalStatus" />
 	</div>
 </template>
 <script>
@@ -25,11 +31,15 @@ export default {
   methods: {
   	tglCls (status) {
   		this.modalStatus=status
-  	}
+  	},
+	updateLoginModal (da) {
+		this.loginModalStatus=da
+	}
   },
   data () {
     return {
-      modalStatus: false
+      modalStatus: false,
+	  loginModalStatus: false
     }
   },
 }
