@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-11">
         <div class="video_chating_sec">
           <h2>MelodyCam</h2>
           <h4>Find new friends by video chatting with  people from all over the world!</h4>
@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <div class="col-md-5">
+      <div class="col-md-1">
         <div class="melocam_right_img">
           <img src="~assets/images/circle_vector_01.png" class="img-responsive show-dek" alt="">
           <img src="~assets/images/home-btm-responsive.png" class="img-responsive show-mobile" alt="">
