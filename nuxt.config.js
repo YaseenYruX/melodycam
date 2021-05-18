@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -52,5 +52,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    babel: {
+      plugins: [
+        // https://github.com/nuxt/nuxt.js/issues/9224#issuecomment-830577523
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+      ],
+    },
   }
 }
