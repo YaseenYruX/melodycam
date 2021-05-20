@@ -14,7 +14,7 @@
 						<li>
 							<a class="loginBtn" @click="loginModalStatus=true">
 								<!-- <img src="~assets/images/setting-icon-02.png"> -->
-								Login
+								Sign Up
 							</a>
 						</li>
 					</ul>

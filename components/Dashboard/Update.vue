@@ -5,14 +5,31 @@
           <CommonModalHead />
           <div class="modal_heading_sec">
             <h3>Update</h3>
-            <p>We have updating our filtering system (Female\Male) and you can now instanly find people according to your settings.</p>
+            <p>You need to be log-in to use the Free Filtering System on Melodycam. We have updated the filtering system which will find the correct match faster</p>
           </div>
           <div class="row">
             <div class="col-md-12">
-             <CommonButton btnText="Ok, thank you" />
+              <button @click="loginModalStatus=true" class="loginBtn">Ok, thank you</button>
+             <!-- <CommonButton redirectTo="dashboard" btnText="Ok, thank you" /> -->
             </div>
           </div>
         </div>
 		</b-modal>
+    <DashboardLogin @loginModalStatusEv="updateLoginModal" :status="loginModalStatus" />
 	</div>
 </template>
+<script>
+export default {
+  name: 'Update',
+  methods: {
+	updateLoginModal (da) {
+		this.loginModalStatus=da
+	}
+  },
+  data () {
+    return {
+	    loginModalStatus: false
+    }
+  },
+}
+</script>

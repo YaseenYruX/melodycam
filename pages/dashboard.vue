@@ -36,23 +36,23 @@
             </div>
             <div class="chat_list_main">
               <div class="chat_list" :class="(chatShowing===true?'show_list':'')">
-                <div class="messages sent_msg">
+                <!-- <div class="messages sent_msg">
                   <div class="profile_img">
                     <img src="~assets/images/profile_img.png">
                   </div>
                   <div class="message_text">
                     <p>Hi, how are you?</p>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="messages recieve_msg">
+                <!-- <div class="messages recieve_msg">
                   <div class="message_text text-right">
                     <p>Hi, how are you?</p>
                   </div>
                   <div class="profile_img text-center">
                     <img src="~assets/images/profile_img.png">
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="sendMsg">
                 <input type="text" name="" placeholder="Write to your new friend">

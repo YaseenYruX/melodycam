@@ -4,7 +4,7 @@
 		  <div class="login_sec_main in_modal">
           <CommonModalHead />
           <div class="modal_heading_sec">
-            <h3>Login</h3>
+            <h3>Sign up</h3>
           </div>
           <form>
             <div class="row">
@@ -39,7 +39,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-               <CommonButton btnText="Next" />
+               <button class="loginBtn">Next</button>
               </div>
             </div>
 
